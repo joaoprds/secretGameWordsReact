@@ -38,7 +38,13 @@ function App() {
   const startGame = () => {
     const {word, category} = pickWordAndCategory()
 
-    console.log(word, category)
+    let wordLetters = word.split()
+    wordLetters = wordLetters.map((l) => l.toLowerCase())
+
+    setPickedWord(word)
+    setPickedCategory(category)
+    setLetters(letters)
+    
     setGameStage(stages[1].name);
   };
 
